@@ -1,0 +1,6 @@
+*.deb
+*.rpm
+distfiles/
+packages/
+*.tbz2
+*.gpkg.tar

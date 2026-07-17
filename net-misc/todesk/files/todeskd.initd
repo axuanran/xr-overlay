@@ -1,0 +1,15 @@
+#!/sbin/openrc-run
+
+name="${RC_SVCNAME}"
+description="ToDesk daemon service"
+
+supervisor="supervise-daemon"
+command="/opt/todesk/bin/ToDesk_Service"
+
+export LIBVA_DRIVER_NAME="iHD"
+export LIBVA_DRIVERS_PATH="/opt/todesk/bin"
+
+depend() {
+    need localmount
+    use net dbus
+}
